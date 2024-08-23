@@ -1,0 +1,67 @@
+/* Styling for the countdown container */
+#countdown-container {
+    position: fixed; /* Sticks the timer to the top */
+    top: 0;
+    width: 100%;
+    background-color: #ff4d4d; /* Urgent red background color */
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    padding: 15px 0;
+    z-index: 1000; /* Ensures the timer is always on top */
+    box-shadow: 0 4px 2px -2px gray; /* Adds a subtle shadow for emphasis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the countdown timer */
+#countdown {
+    font-size: 60px; /* Bigger and bolder font size */
+    font-weight: bold;
+    letter-spacing: 2px; /* Adds space between the numbers */
+}
+
+/* Styling for the text next to the countdown */
+#text-right {
+    font-size: 60px; /* Matching the timer's font size */
+    font-weight: bold;
+    letter-spacing: 2px; /* Matching the letter spacing */
+    margin-left: 20px; /* Space between the countdown and the text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #countdown {
+        font-size: 40px; /* Smaller font size for the countdown */
+    }
+
+    #text-right {
+        font-size: 40px; /* Smaller font size for the text */
+        margin-left: 10px; /* Smaller margin on mobile */
+    }
+
+    #countdown-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    #countdown-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 8px 0; /* Less padding for smaller screens */
+    }
+
+    #text-right {
+        font-size: 20px; /* Even smaller font size for the text */
+        margin-left: 0; /* Remove margin */
+        margin-bottom: 5px; /* Add some space below the text */
+    }
+
+    #countdown {
+        font-size: 30px; /* Smaller font size for the countdown */
+    }
+}
